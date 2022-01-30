@@ -1,0 +1,62 @@
+/******************************************************************************
+Escula Colombiana de ingenieria Julio Garavito
+Mateo Felipe Umaña - Arthur Stink Paipilla - Paula Rodriguez Gonzalez - Paul Sebastian Romero
+Trabajo para exponerlo durante la clase del martes 1 de febrero
+*******************************************************************************/
+
+#include <stdio.h>
+
+int
+main ()
+{
+  int x1 = 0, x2 = 0, y1 = 0, y2 = 0;
+  float cy = 0, m = 0;
+  printf ("\nx=");
+  scanf ("%d", &x1);
+  printf ("\ny=");
+  scanf ("%d", &y1);
+  printf ("\nEl primer punto es (%d,%d)", x1, y1);
+  printf ("\ningrese el segundo punto\n");
+  printf ("\nx=");
+  scanf ("%d", &x2);
+  printf ("\ny=");
+  scanf ("%d", &y2);
+  printf ("\nEl segundo punto es (%d,%d)\n", x2, y2);
+
+  if (x1 == x2 && y1 == y2)
+    {
+      printf
+	("\n Los puntos son los mismos, por favor ingrese puntos diferentes");
+      return 0;
+    }
+
+  if (x1 == x2)
+    {
+      printf ("\n La recta es perpendicular al eje x y lo corta en x=%d\n",
+	      x1);
+      return 0;
+    }
+
+  if (y1 == y2)
+    {
+      printf ("\n La recta es perpendicular al eje y y lo corta en x=%d\n",
+	      x1);
+      return 0;
+    }
+
+  m = (float)(y2 - y1) / (x2 - x1);
+  cy = y1 - m * x1;
+
+  printf ("\nLa ecuacion de la recta es y = %gx %+g", m, cy);
+
+  if (m > 0)
+    {
+      printf ("y es ascendente");
+    }
+  else
+    {
+      printf ("y es descendente");
+    }
+
+  return 0;
+}
