@@ -51,11 +51,11 @@ main ()
 
   if (m > 0)
     {
-      printf ("y es ascendente");
+      printf ("La recta es ascendente");
     }
   else
     {
-      printf ("y es descendente");
+      printf ("La recta es descendente");
     }
 
   return 0;
